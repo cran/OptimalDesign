@@ -10,7 +10,7 @@ if (!is.matrix(F) || !is.numeric(F) || !all(is.finite(F))) stop("F must be a mat
 n <- dim(F)[1]; m <- dim(F)[2]
 if (m != 1) stop("This function is intended to solve problems with m=1.") 
 
-print(paste("Condition number of F'F is", rcond(t(F) %*% F)), quote = FALSE)
+print(paste("Reciprocal condition number of F'F is", rcond(t(F) %*% F)), quote = FALSE)
 
 ## Verify b
 if (!is.vector(b) || !is.numeric(b) || !all(is.finite(b))) stop("b must be a vector of real numbers.")

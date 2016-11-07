@@ -49,12 +49,12 @@
   vertex exchange steps, and then one multiplicative step. The justification of this approach is similar to that of 
   Yu (2011); see the references.
   
-  The information matrix of \code{w1} should have the condition number of at least \code{1e-5}. Even if no initial design is
+  The information matrix of \code{w1} should have the reciprocal condition number of at least \code{1e-5}. Even if no initial design is
   provided, the model should be non-singular in the sense that there \emph{exists} an approximate design \code{w} with a well
   conditioned information matrix. If this requirement is not satisfied, the computation may fail, or it may produce a deficient design. 
 
   If the criterion of IV-optimality is selected, the region \code{R} should be chosen such that the associated matrix \code{L}
-  (see the help page of the function \link{od.crit}) is non-singular, preferably with a condition number of at least \code{1e-5}.
+  (see the help page of the function \link{od.crit}) is non-singular, preferably with a reciprocal condition number of at least \code{1e-5}.
   If this requirement is not satisfied, the computation may fail, or it may produce a deficient design.
   
   The performance of the algorithms depends on the problem, on the choice of the parameters, and on the hardware used. However,

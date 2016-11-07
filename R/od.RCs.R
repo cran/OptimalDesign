@@ -13,7 +13,7 @@ if (!is.vector(N) || !is.numeric(N) || !all(is.finite(N)) || (length(N) != 1) ||
 if (N < m) stop("The required size N of the design should not be smaller than the number of parameters.")
 
 ### condition number test
-print(paste("Condition number of F'F is", rcond(t(F)%*%F)), quote=FALSE)
+print(paste("Reciprocal condition number of F'F is", rcond(t(F)%*%F)), quote=FALSE)
 
 ## Verify w0 
 if (is.null(w0)) w0 <- rep(0, n)

@@ -10,7 +10,7 @@ if (n < m) stop("The number dim(F)[1] of design points must be greater or equal 
 if (m < 2) stop("The number dim(F)[2] of parameters must be at least 2. Use the procedure od.m1 for models with a one-dimensional parameter.")
 
 ### condition number test
-print(paste("Condition number of F'F is", rcond(t(F)%*%F)), quote=FALSE)
+print(paste("Reciprocal condition number of F'F is", rcond(t(F)%*%F)), quote=FALSE)
 
 ## Verify b
 if (!is.vector(b) || !is.numeric(b) || !all(is.finite(b))) stop("b must be a vector of real numbers.")
@@ -34,7 +34,7 @@ if (length(w0) != n) stop("The length of w0 must be equal to the number dim(F)[1
 if (is.null(w1)) w1<-rep(0,n)             
 if (!is.vector(w1) || !is.numeric(w1) || !all(is.finite(w1)) || (min(w1) < 0)) stop("w1 must be NULL, or a vector of non-negative real numbers.")
 if (length(w1) != n) stop("The length of w1 must be equal to the number dim(F)[1] of design points.")
-if (any(A %*% w1 > b)) stop("w1 must satisfy the constraints A %*% w1 <= b.")
+
 
 ## Verify crit
 if (!is.vector(crit) || !is.character(crit) || (length(crit) != 1) || !is.element(crit, c("D", "A", "IV"))) stop("crit must be 'D', 'A', or 'IV'.")

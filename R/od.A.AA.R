@@ -42,9 +42,9 @@ stepsize <- function (M, w, v) {
 # Computes the A-optimal weight delta for the weight exchange in the sense:
 # w[v[1]] <- w[v[1]] + delta
 # w[v[2]] <- w[v[2]] - delta
-
-  dv <- F[v, ] %*% solve(M, t(F[v, ])) 
-  av <- F[v, ] %*% solve(M %*% M, t(F[v, ]))  
+  M.inv <- solve(M)
+  dv <- F[v, ] %*% M.inv %*% t(F[v, ]) 
+  av <- F[v, ] %*% M.inv %*% M.inv %*% t(F[v, ]) 
   A <- av[1,1] - av[2,2] 
   B <- 2 * dv[1,2] * av[1,2] - dv[2,2] * av[1,1] - dv[1,1] * av[2,2]  
   C <- dv[1,1] - dv[2,2] 
@@ -53,12 +53,12 @@ stepsize <- function (M, w, v) {
   k <- v[1]
   l <- v[2]
 
-  if ((G == 0) && (B != 0)) {
+  if ((abs(G) <= 1e-10) && (abs(B) >= 1e-10)) {
     r0 <- -A / (2*B)  
     if ((-w[k] <= r0) && (r0 <= w[l])) return(r0)  
   }
 
-  if (G != 0){  
+  if (abs(G) >= 1e-10){  
     H <- B^2 - A * G
     if (H >= 0){
       K <- sqrt(H)
@@ -75,7 +75,7 @@ stepsize <- function (M, w, v) {
 }
 
 start <- as.numeric(proc.time()[3])
-info <- paste("Running A.AA", alg, "for cca", t.max, "seconds")
+info <- paste("Running A.AA", alg, "for maximum cca", t.max, "seconds")
 info <- paste(info, " starting at ", Sys.time(), ".", sep="") 
 print(info, quote=FALSE)
 

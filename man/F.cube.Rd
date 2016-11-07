@@ -5,7 +5,7 @@
 
 \description{
   Creates the matrix of regressors for a model on a \code{d}-dimensional rectangular grid of points,
-  i.e., for a factorial model with \code{d} factors.
+  i.e., for a factorial model with \code{d} quantitative factors.
 }
 
 \usage{
@@ -48,8 +48,8 @@ F.cube(~I(cos(x1)) + I(sin(x1)) + I(cos(2*x1)) + I(sin(2*x1)),
 # interval [-1,1].
 F.cube(~x1 + I(x1^2) + I(x1^3), -1, 1, 21)
 
-# The matrix of regressors of the model with the intercept, the linear 
-# and the second-order interaction terms for a model with 3 factors; 
+# The matrix of regressors of the 3-factor model with the intercept, 
+# the linear and the second-order interaction terms; 
 # the first 2 factors have levels -1, 0, 1, and the third factor has 
 # levels -1, 0.5, 0, 0.5, 1.
 F.cube(~x1*x2 + x1*x3 + x2*x3, rep(-1, 3), rep(1, 3), c(3, 3, 5))

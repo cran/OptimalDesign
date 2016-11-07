@@ -38,7 +38,7 @@ function(F, N, w1, alg, eff, t.max){
 #   - Add the deletion of non-supporting points.
 
 start <- as.numeric(proc.time()[3])
-info <- paste("Running D.AA", alg, "for cca", t.max, "seconds")
+info <- paste("Running D.AA", alg, "for maximum cca", t.max, "seconds")
 info <- paste(info, " starting at ", Sys.time(), ".", sep="") 
 print(info, quote=FALSE)
 

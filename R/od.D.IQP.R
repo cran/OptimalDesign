@@ -43,9 +43,7 @@ m<-dim(F)[2]
 
 Fp <- F + matrix(runif(n * m, min=-kappa, max=kappa), nrow=n)
 
-if (is.vector(A)) A<-t(as.matrix(A))
 
-A<-as.matrix(A)
 tone.m <- t(rep(1, m))
 
 if(all(w1==0)){

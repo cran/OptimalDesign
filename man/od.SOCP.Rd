@@ -57,11 +57,11 @@
    exact designs computed using methods such as \link{od.RC}, \link{od.IQP}, and \link{od.MISOCP}.
   
    The model should be non-singular in the sense that there exists an approximate design \code{w} satisfying the constraints \code{0<=w0<=w} and
-   \code{A\%*\%w<=b}, with a non-singular information matrix, preferably with the condition number of at least \code{1e-5}. If this requirement
+   \code{A\%*\%w<=b}, with a non-singular information matrix, preferably with the reciprocal condition number of at least \code{1e-5}. If this requirement
    is not satisfied, the computation may fail, or it may produce a deficient design. 
    
    If the criterion of IV-optimality is selected, the region \code{R} should be chosen such that the associated matrix \code{L}
-   (see the help page of the function \link{od.crit}) is non-singular, preferably with a condition number of at least \code{1e-5}.
+   (see the help page of the function \link{od.crit}) is non-singular, preferably with a reciprocal condition number of at least \code{1e-5}.
    If this requirement is not satisfied, the computation may fail, or it may produce a deficient design.
    
    The perturbation parameter \code{kappa} can be used to add \code{n*m} iid random numbers from the uniform distribution

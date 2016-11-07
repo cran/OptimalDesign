@@ -289,8 +289,6 @@ if(m > 10){
   stop("This procedure is only implemented for m<=10.")
 }
 
-if (is.null(A)) A <- rep(1, n)
-if (is.vector(A)) A <- t(as.matrix(A))
 
 model$modelsense <- "max"
 

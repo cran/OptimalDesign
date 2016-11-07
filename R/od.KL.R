@@ -8,7 +8,7 @@ if (n < m) stop("The number dim(F)[1] of design points must be greater or equal 
 if (m < 2) stop("The number dim(F)[2] of parameters must be at least 2. Use the procedure od.m1 for models with a one-dimensional parameter.") 
 
 ### condition number test
-print(paste("Condition number of F'F is", rcond(t(F)%*%F)), quote=FALSE) 
+print(paste("Reciprocal condition number of F'F is", rcond(t(F)%*%F)), quote=FALSE) 
 
 ## Verify N
 if (!is.vector(N) || !is.numeric(N) || !all(is.finite(N)) || (length(N) != 1) || (N <= 0) || (N != round(N))) stop("The required size N of the design must be a natural number.")

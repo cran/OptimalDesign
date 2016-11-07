@@ -47,7 +47,7 @@
   \code{w0<=w} with the specific properties mentioned above, form the so-called resource constraints which encompass many
   practical restrictions on the design, always permit a feasible solution, and lead to a bounded set of feasible solutions.
 
-  The information matrix of \code{w1} should preferably have the condition number of at least \code{1e-5}. Note that the floor
+  The information matrix of \code{w1} should preferably have the reciprocal condition number of at least \code{1e-5}. Note that the floor
   of an optimal approximate design (computed using \link{od.SOCP}) is sometimes a good initial design. Alternatively,
   the initial design can be the result of a different optimal design procedure, such as \link{od.IQP}. Even if no initial design
   is provided, the model should be non-singular in the sense that there \emph{exists} an exact design \code{w} with a well
@@ -55,7 +55,7 @@
   or it may produce a deficient design. 
 
   If the criterion of IV-optimality is selected, the region \code{R} should be chosen such that the associated matrix \code{L}
-  (see the help page of the function \link{od.crit}) is non-singular, preferably with a condition number of at least \code{1e-5}.
+  (see the help page of the function \link{od.crit}) is non-singular, preferably with a reciprocal condition number of at least \code{1e-5}.
   If this requirement is not satisfied, the computation may fail, or produce a deficient design.
   
   The perturbation parameter \code{kappa} can be used to add \code{n*m} iid random numbers from the uniform distribution

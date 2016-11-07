@@ -27,10 +27,8 @@ m <- dim(F)[2]
 
 Fp <- F + matrix(runif(n * m, min=-kappa, max=kappa), nrow=n)
 
-if (is.null(A)) 
-  A <- rep(1, n)
-if (is.vector(A)) 
-  A <- t(as.matrix(A))
+
+
 da <- dim(A)
 nc <- da[1] #number of constraints
 M <- 4 * n + m * n #number of parameters
