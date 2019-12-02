@@ -11,14 +11,16 @@
 }
 
 \description{
-  Procedures for computing D-, A-, and IV-optimal approximate and exact designs of experiments 
-  on finite domains, for regression models with real-valued, uncorrelated observations. 
+  Procedures for computing D-, A-, I-, and c-optimal approximate and exact designs of experiments on finite domains, for regression models with uncorrelated observations. 
 }
 
 \author{ 
   Radoslav Harman, Lenka Filova
 }
 
-\keyword{
-  Optimal Design, A-optimality, D-optimality, IV-optimality
-}
+\keyword{ Optimal Design }
+\keyword{ A-optimality }
+\keyword{ D-optimality }
+\keyword{ I-optimality }
+\keyword{ c-optimality }
+

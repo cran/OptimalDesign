@@ -1,20 +1,8 @@
-exportPattern("^[^\\.]") 
+exportPattern("^[[:alpha:]]+")
 
-
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
-# Export all names
-
-exportPattern(".")
-
-# Import all packages listed as Imports or Depends
-
-
-
-
-importFrom("grDevices", "rainbow")
-importFrom("graphics", "plot")
-importFrom("stats", "model.frame", "model.matrix", "rnorm", "runif")
-importFrom("utils", "combn") 
-
+importFrom("grDevices", "col2rgb", "rgb")
+  importFrom("graphics", "grid", "lines", "plot", "points", "polygon",
+             "text")
+  importFrom("stats", "median", "model.frame", "model.matrix", "pnorm",
+             "rnorm", "runif", "uniroot")
+  importFrom("utils", "combn")
