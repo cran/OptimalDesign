@@ -9,7 +9,7 @@ Fx_glm <- function(formula, theta0, glm.model="bin-logit",
   if (glm.model == "bin-logit")
     u <- function(eta) exp(eta)/(1 + exp(eta))^2
   if (glm.model == "bin-probit")
-    u <- function(eta) pnorm(eta)^2/(pnorm(eta)*(1 - pnorm(eta)))
+    u <- function(eta) dnorm(eta)^2/(pnorm(eta)*(1 - pnorm(eta)))
   if (glm.model == "bin-cloglog")
     u <- function(eta) exp(-exp(eta))/(1 - exp(-exp(eta)))*exp(eta)^2
   if (glm.model == "Poisson-log")

@@ -22,7 +22,7 @@ od_RC <- function(Fx, b, A = NULL, w0 = NULL, bin = FALSE, Phi.app = NULL,
       stop("The pure c-optimality is not implemented for RC. Try its regularized version: the C-optimality.")
    if (is.null(w1)) w1 <- w0
    if (is.null(Phi.app))
-      message("Phi.app not supplied. Therefore, the lower bound on efficieny will not be reported.")
+      message("Phi.app not supplied. Therefore, the lower bound on efficiency will not be reported.")
 
    if (crit == "D") 
       res <- od_D_RC(Fx = Fx, b = b, A = A, w0 = w0, Phi.app = Phi.app, 

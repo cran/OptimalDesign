@@ -4,5 +4,5 @@ importFrom("grDevices", "col2rgb", "rgb")
   importFrom("graphics", "grid", "lines", "plot", "points", "polygon",
              "text")
   importFrom("stats", "median", "model.frame", "model.matrix", "pnorm",
-             "rnorm", "runif", "uniroot")
+             "rnorm", "dnorm", "runif", "uniroot")
   importFrom("utils", "combn")
