@@ -493,11 +493,13 @@ verify <- function(call.string, ...) {
    # natural number N cannot be NULL
    if ("N" %in% args) {
       N <- l$N
-      if (!is.vector(N) || !is.numeric(N) || !all(is.finite(N)) || 
-          length(N) != 1 || N <= 0 || N != round(N)) {
-         print.default("N is:"); print.default(N, max = 100)
-         stop("The required size N of the design must be a natural number.", call. = FALSE)
-      }
+      if (!is.vector(N) || !is.numeric(N) || !all(is.finite(N)) ||
+            length(N) != 1 || N <= m-1 || N != round(N) ) {
+            print.default("N is:")
+            print.default(N, max = 100)
+            stop("The required size N of the design must be a natural number greater than or equal to the number m of parameters.",
+                call. = FALSE)
+        }
    }
 
    # Positive finite real number Phi.app can be NULL 
@@ -575,7 +577,7 @@ verify <- function(call.string, ...) {
       if (!is.vector(rest.max) || !is.numeric(rest.max) ||
           length(rest.max) != 1 || rest.max != round(rest.max) || rest.max < 2) {
          print.default("rest.max is:"); print.default(rest.max, max = 100)
-         stop("rest.max must be a natural number or Inf.", call. = FALSE)
+         stop("rest.max must be a natural number >=2 or Inf.", call. = FALSE)
       }
    }
    

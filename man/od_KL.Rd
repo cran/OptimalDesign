@@ -60,7 +60,7 @@ The tuning parameter \code{K} is the (upper bound on the) number of "least promi
 
 The implemented method is greedy in the sense that each improving exchange is immediately executed. If the algorithm stops in a local optimum before the allotted time elapsed, the computation is restarted with a random initial design (independent of \code{w1}). The final result is the best design found within all restarts.
 
-The performance of the function depends on the problem, on the chosen parameters, and on the hardware used, but in most cases the function can compute a nearly-optimal exact design for a problem with a ten thousands design points within seconds of computing time. Because this is only a heuristic, we advise the user to verify the quality of the resulting design by comparing it to the result of an alternative method (such as \code{\link{od_RC}}).
+The performance of the function depends on the problem, on the chosen parameters, and on the hardware used, but in most cases the function can compute a nearly-optimal exact design for a problem with up to ten thousand design points within seconds of computing time. Because this is only a heuristic, we advise the user to verify the quality of the resulting design by comparing it to the result of an alternative method (such as \code{\link{od_RC}}).
 }
 
 \value{

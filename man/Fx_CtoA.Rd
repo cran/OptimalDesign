@@ -46,7 +46,7 @@ Radoslav Harman and Lenka Filova
 \examples{
 # We will compute a C-efficient (regularized c-optimal) design
 # for estimating the mean response in x=1 for a quadratic regression
-# using and algorithm for A-optimality.
+# using an algorithm for A-optimality.
 
 Fx <- Fx_cube(~x1 + I(x1^2), n.levels=101)
 Fx.trans <- Fx_CtoA(Fx, h=c(1, 1, 1))

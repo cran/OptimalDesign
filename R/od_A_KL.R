@@ -49,7 +49,7 @@ od_A_KL <- function(Fx, N, Phi.app, w1, K, L, rest.max, t.max, track) {
     finish.all <- finish <- as.numeric(proc.time()[3]) > start + t.max
     while (!finish) {
       tm <- as.numeric(proc.time()[3]) - start
-      if (tm > next.sec) {
+      if ((tm > next.sec) && track) {
         Phi.best <- m / trMinv.best
         info <- paste("od_A_KL Time:", round(tm, 1), "Value:",
                       round(Phi.best, 6), "Efficiency:",

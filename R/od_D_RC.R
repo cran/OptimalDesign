@@ -27,7 +27,7 @@ od_D_RC <- function(Fx, b, A, w0, Phi.app, w1, rest.max, t.max, track) {
     Phi.exact <- function(w) {
         supp <- as.logical(w)
         w.tmp <- w[supp]; Fx.tmp <- Fx[supp, ]
-        if (length(supp) == 1) Fx.tmp <- t(Fx.tmp)
+        if (sum(supp) == 1) Fx.tmp <- t(Fx.tmp)
         M <- crossprod(sqrt(w.tmp) * Fx.tmp)
         if (rcond(M) > 1e-12) return(max(c(0, det(M)))^(1/m))
         return(0)

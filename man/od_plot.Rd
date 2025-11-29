@@ -64,7 +64,7 @@ the size of the characters that represent the directional derivatives
 the numerical code of the character used to plot the directional derivatives
 }
 \item{asp}{
-the aspect ration of the axes
+the aspect ratio of the axes
 }
 \item{main.lab}{
 the main title of the plot

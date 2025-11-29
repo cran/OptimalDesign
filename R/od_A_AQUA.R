@@ -80,7 +80,7 @@ od_A_AQUA <- function(Fx, b1, A1, b2, A2, b3, A3, bin, M.anchor, ver, conic, t.m
     
     model$obj <- ob; vtypes <- rep("C", np)
     if (bin) {vtypes[1:n] <- "B"} else {vtypes[1:n] <- "I"}
-    model$vtypes <- vtypes; model$modelsense <- "min"
+    model$vtype <- vtypes; model$modelsense <- "min"
     
     params  <-  list(TimeLimit = t.max, MIPFocus = 1)
     result <- gurobi::gurobi(model, params); gc()

@@ -26,7 +26,7 @@ Print the call of the function?
 }
 
 \details{
-Creates the matrix \code{Fx} of artificial regressors, such that the D- and A-optimal designs for the corresponding artificial LRM are are the same as what is called the D- and A-optimal design in the original block model with blocks of size two.
+Creates the matrix \code{Fx} of artificial regressors, such that the D- and A-optimal designs for the corresponding artificial LRM are the same as what is called the D- and A-optimal design in the original block model with blocks of size two.
 }
 
 \value{

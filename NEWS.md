@@ -1,4 +1,6 @@
-# OptimalDesign 1.0.2
+# OptimalDesign 1.0.3
 
-- Fixed formatting in DESCRIPTION to comply with CRAN URL policies
-- Minor internal improvements and bug fixes
+* Extended functionality: `od\_MISOCP` now supports D-optimality computation for `m > 10` (previously limited to `m ≤ 10`).
+* Updated Gurobi integration: corrected the use of `vtype` to ensure compatibility with Gurobi 12 and later.
+* Improved documentation, including a rewritten `OptimalDesign-package.Rd`.
+* Fixed several small typos and minor inconsistencies throughout the package.

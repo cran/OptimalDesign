@@ -72,7 +72,7 @@ od_A_MISOCP <- function(Fx, b1, A1, b2, A2, b3, A3, bin, type, gap, t.max) {
     vtypes[1:n] <- "I"
     if (bin) vtypes[1:n] <- "B"
   }
-  model$vtypes <- vtypes
+  model$vtype <- vtypes
   
   if (type == "approximate" && bin)
     model$ub[1:n] <- rep(1, n) 

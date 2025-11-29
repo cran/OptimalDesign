@@ -43,7 +43,7 @@ od_A_REX <- function(Fx, w1, ver, gamma, eff, it.max, t.max, track) {
     print(info, quote = FALSE)
   }
   
-  eff.inv <- 1/eff; n.iter <- 0; L <- min(n, gamma*m)
+  eff.inv <- 1/eff; n.iter <- 0; L <- min(n, ceiling(gamma * m))
   lx.vec <- rep(0, L); index <- 1:n; one <- rep(1, m)
   
   if (is.null(w1)) w1 <- od_PIN(Fx, echo = FALSE)$w.pin/m

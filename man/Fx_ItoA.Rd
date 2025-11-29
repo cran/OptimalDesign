@@ -36,7 +36,7 @@ Radoslav Harman, Lenka Filova
 }
 
 \note{
-It is also simple to transform the \emph{weighted} I-optimality to A-optimality; just multiply the rows of \code{Fx} by the squares roots of weights of individual design points and transform the resulting matrix by \code{Fx_ItoA}.
+It is also simple to transform the \emph{weighted} I-optimality to A-optimality; just multiply the rows of \code{Fx} by the squares roots of the weights of individual design points and transform the resulting matrix by \code{Fx_ItoA}.
 }
 
 \seealso{

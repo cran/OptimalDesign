@@ -27,7 +27,7 @@ Print the call of the function?
 
 
 \value{
-The information matrix of the design \code{w} in the model with all candidate regresors given by the rows of \code{Fx}.
+The information matrix of the design \code{w} in the model with all candidate regressors given by the rows of \code{Fx}.
 }
 
 \author{

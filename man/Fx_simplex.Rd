@@ -18,7 +18,7 @@ Fx_simplex(formula, n.levels.mix=NULL, echo=TRUE)
 the formula of the model. The rules for creating the formula are standard for R but: 1) the formula must not contain the dependent variable (it is one-sided); 2) the \code{d} factors (variables) must be labeled \code{x1,x2,x3,}...
 }
 \item{n.levels.mix}{
-the number of levels of each factor (each factor has the same number of levels). If \code{n.levels=NULL}, the program sets \code{n.levels <- 2*d + 1}.
+the number of levels of each factor (each factor has the same number of levels). If \code{n.levels.mix=NULL}, the program sets \code{n.levels.mix <- 2*d + 1}.
 }
 \item{echo}{
 Print the call of the function?
